@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>台灣鐵三角 Audio-Technica Taiwan</title>
+    <!-- include font awesome -->
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <!-- 載入counter up -->
+    <link rel="stylesheet" href="https://unpkg.com/counterup2@2.0.2/dist/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+
+    <style>
+        .counter {
+            font-variant-numeric: tabular-nums;
+            display: inline-block;
+        }
+
+        .counter:not(.is-visible) {
+            visibility: hidden;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", "Noto Sans TC", sans-serif;
+            background-color: #f5f7fa;
+            color: #66717d;
+        }
+
+        #section1 {
+            background: linear-gradient(135deg, #ffffff, #eef3f9);
+            padding: 12px 0;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        /* 主視覺輪播：寬度上限 1140（可只改此數字）；區塊比例 1720:715；圖片 contain 完整顯示不裁切 */
+        #section2 .carousel {
+            width: 100%;
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .carousel-item-bg {
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            background-color: #f0f2f5;
+            aspect-ratio: 1720 / 715;
+            width: 100%;
+            height: auto;
+            min-height: 0;
+        }
+
+        /* section4 與輪播同寬，並讓左圖邊界對齊輪播左邊界 */
+        #section4 .section4-wrap {
+            max-width: 1140px;
+        }
+
+        #section4 .section4-image-col {
+            padding-left: 0;
+        }
+
+        #section4 .section4-image {
+            background-image: url('images/technica_history.png');
+            background-size: cover;
+            background-position: right;
+            background-repeat: no-repeat;
+            height: 500px;
+        }
+
+        #section4 .text-primary {
+            color: var(--accent-gold-brown) !important;
+        }
+
+        @media (min-width: 768px) {
+            #section4 .section4-row {
+                min-height: 473px;
+            }
+
+            #section4 .section4-image-col,
+            #section4 .section4-content-col {
+                height: 100%;
+            }
+
+            #section4 .section4-image {
+                height: 100%;
+                min-height: 473px;
+            }
+
+            #section4 .section4-content {
+                height: 100%;
+                min-height: 473px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        /* Section 6：整體區塊高度與其他 section 更一致 */
+        #section6 {
+            padding-top: clamp(2.75rem, 7vw, 4.75rem);
+            padding-bottom: clamp(2.75rem, 7vw, 4.75rem);
+        }
+
+        /* Section 6：企業精神 icon 與全站金棕色一致 */
+        #section6 .section6-icon {
+            color: var(--accent-gold-brown);
+            font-size: 3rem;
+            line-height: 1;
+            margin-bottom: 0.85rem;
+        }
+
+        @media (min-width: 768px) {
+            #section6 .section6-icon {
+                font-size: 3.35rem;
+                margin-bottom: 1rem;
+            }
+        }
+
+        /* Section 6：預設只顯示 icon + 標題；hover 毛玻璃 roller 滑入覆蓋，內文在 roller 內 */
+        #section6 .section6-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            background: rgba(255, 255, 255, 0.55);
+            min-height: 260px;
+            display: flex;
+            flex-direction: column;
+            transition: border-color 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        @media (min-width: 768px) {
+            #section6 .section6-card {
+                min-height: 300px;
+            }
+        }
+
+        #section6 .section6-card:hover,
+        #section6 .section6-card:focus-within {
+            border-color: rgba(139, 106, 61, 0.35);
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+        }
+
+        #section6 .section6-card-front {
+            position: relative;
+            z-index: 1;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 260px;
+            padding: 1.75rem 1.35rem 2rem;
+        }
+
+        @media (min-width: 768px) {
+            #section6 .section6-card-front {
+                min-height: 300px;
+                padding: 2rem 1.5rem 2.25rem;
+            }
+        }
+
+        #section6 .section6-card-front h5 {
+            font-size: 1.28rem;
+            font-weight: 600;
+            line-height: 1.4;
+            letter-spacing: 0.02em;
+            color: #4f5964;
+            max-width: 16rem;
+            margin-inline: auto;
+        }
+
+        @media (min-width: 768px) {
+            #section6 .section6-card-front h5 {
+                font-size: 1.52rem;
+                max-width: 15rem;
+            }
+        }
+
+        #section6 .section6-roller {
+            position: absolute;
+            inset: 0;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem 1.5rem;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 1s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.85s ease;
+        }
+
+        #section6 .section6-roller p {
+            color: #4f5964;
+            font-size: 1.03rem;
+            font-weight: 500;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+
+        #section6 .section6-card:hover .section6-roller,
+        #section6 .section6-card:focus-within .section6-roller {
+            opacity: 1;
+            transform: translate(0, 0) !important;
+            pointer-events: auto;
+        }
+
+        #section6 .row>.col:nth-child(1) .section6-roller {
+            transform: translateX(-102%);
+        }
+
+        #section6 .row>.col:nth-child(2) .section6-roller {
+            transform: translateY(102%);
+        }
+
+        #section6 .row>.col:nth-child(3) .section6-roller {
+            transform: translateX(102%);
+        }
+
+        /* Section 7：每個外層 row 撐高，給絕對定位圖片使用；圖 + 內文維持你的巢狀架構 */
+        #section7 > .row {
+            position: relative;
+            min-height: 200px;
+        }
+
+        @media (min-width: 768px) {
+            #section7 > .row {
+                min-height: 420px;
+            }
+        }
+
+        #section7 .section7-visual {
+            z-index: 0;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left-12px center;
+            width: 100%;
+        }
+
+        @media (max-width: 767.98px) {
+            #section7 .section7-visual {
+                position: relative !important;
+                top: auto !important;
+                bottom: auto !important;
+                min-height: 220px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            #section7 .section7-visual {
+                width: 41.66666667%;
+                max-width: 41.66666667%;
+            }
+        }
+
+        /* 第二段：圖改靠右（左右與第一段相反） */
+        #section7 > .row.section7-row--mirror .section7-visual {
+            left: auto !important;
+            right: 12px;
+        }
+
+        #section7 .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        #section7 .container > .row {
+            padding-top: clamp(1.75rem, 4vw, 2.75rem);
+            padding-bottom: clamp(1.75rem, 4vw, 2.75rem);
+        }
+
+        /* 不改結構：僅調整 section7 內文欄位左右縮排，避免內容貼邊 */
+        #section7 .container > .row > .col-md-7 {
+            padding-left: clamp(1rem, 3vw, 2rem);
+            padding-right: clamp(1rem, 3vw, 2rem);
+        }
+
+        @media (min-width: 768px) {
+            #section7 .container > .row > .col-md-7 {
+                padding-left: clamp(1.5rem, 3.2vw, 2.75rem);
+                padding-right: clamp(1.5rem, 3.2vw, 2.75rem);
+            }
+
+            /* 讓 section7 內文欄位高度與圖片區一致（上下貼齊） */
+            #section7 > .row > .container {
+                min-height: inherit;
+                display: flex;
+                align-items: stretch;
+            }
+
+            #section7 .container > .row {
+                width: 100%;
+                min-height: inherit;
+                align-items: stretch;
+            }
+
+            #section7 .container > .row > .col-md-7 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        /* Section7 標題上方金色底線 */
+        .section7-gold-line {
+            width: clamp(90px, 18vw, 180px);
+            height: 2px;
+            border-radius: 999px;
+            background: var(--accent-gold-brown);
+            margin-bottom: 0.95rem;
+        }
+
+        /* 輪播底部控制條（indicators）：靠左、放大、hover 用網站主色 */
+        #section2 .carousel-indicators {
+            justify-content: flex-start;
+            margin-left: 16px;
+            margin-right: 16px;
+            gap: 10px;
+        }
+
+        #section2 .carousel-indicators [data-bs-target] {
+            width: 56px;
+            height: 6px;
+            /* border-radius: 999px; */
+            background-color: rgba(102, 113, 125, 0.35);
+            opacity: 1;
+            transition: background-color var(--underline-duration) ease-in-out;
+        }
+
+        #section2 .carousel-indicators [data-bs-target]:hover,
+        #section2 .carousel-indicators .active {
+            background-color: var(--accent-gold-brown);
+        }
+
+        /* md 以下：手機輪播滿版、可裁切置中、高度固定 600px */
+        @media (max-width: 767.98px) {
+            #section2 .carousel {
+                max-width: 100%;
+            }
+
+            .carousel-item-bg {
+                background-size: cover;
+                background-color: transparent;
+                aspect-ratio: auto;
+                height: 600px;
+            }
+        }
+
+        .main-nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .menu-list.collapse:not(.show) {
+            display: none;
+        }
+
+        .menu-list a {
+            text-decoration: none;
+            color: inherit;
+            font-weight: 500;
+            font-size: 1rem;
+            white-space: nowrap;
+            transition: color 0.2s ease;
+        }
+
+        .menu-list a:hover {
+            color: #0d6efd;
+        }
+
+        .social-icons {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .menu-toggle {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            border: 1px solid #d9e1ea;
+            background: #fff;
+            color: #333;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .menu-toggle:hover {
+            background-color: #0d6efd;
+            color: #fff;
+            border-color: #0d6efd;
+        }
+
+        .social-icons .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #66717d;
+            font-size: 1.2rem;
+            line-height: 1;
+            text-decoration: none;
+            transition: color 0.2s ease, transform 0.2s ease;
+        }
+
+        .social-icons .social-link:hover {
+            color: #4f5964;
+            transform: translateY(-1px);
+        }
+
+        .member-menu {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .member-dropdown {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            min-width: 148px;
+            background: #fff;
+            border: 1px solid #e4e8ee;
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+            padding: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(6px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+            z-index: 30;
+        }
+
+        .member-menu:hover .member-dropdown,
+        .member-menu:focus-within .member-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .member-btn {
+            display: block;
+            width: 100%;
+            border: 1px solid #d6dde6;
+            border-radius: 8px;
+            background: #fff;
+            color: #66717d;
+            font-size: 0.9rem;
+            text-align: center;
+            text-decoration: none;
+            padding: 7px 10px;
+            transition: all 0.2s ease;
+        }
+
+        .member-btn:hover,
+        .member-btn:focus-visible {
+            color: var(--accent-gold-brown);
+            border-color: var(--accent-gold-brown);
+            background: #fbf8f2;
+        }
+
+        .register-submit-btn {
+            border: 1px solid #d6dde6;
+            background: #f7f9fc;
+            color: #66717d;
+            font-weight: 500;
+            transition: color var(--underline-duration) ease-in-out,
+                border-color var(--underline-duration) ease-in-out,
+                background-color var(--underline-duration) ease-in-out;
+        }
+
+        .register-submit-btn:hover,
+        .register-submit-btn:focus-visible {
+            color: var(--accent-gold-brown);
+            border-color: var(--accent-gold-brown);
+            background: #fbf8f2;
+        }
+
+        .register-submit-btn--no-hover:hover,
+        .register-submit-btn--no-hover:focus-visible {
+            color: #66717d;
+            border-color: #d6dde6;
+            background: #f7f9fc;
+        }
+
+        #section8 {
+            padding-top: clamp(3.5rem, 8vw, 6rem);
+            padding-bottom: clamp(1.5rem, 4vw, 2.75rem);
+        }
+
+        #section8 .section8-title {
+            color: #4f5964;
+            letter-spacing: 0.02em;
+        }
+
+        .section8-card {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.78);
+            min-height: 200px;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .section8-card:hover {
+            border-color: rgba(139, 106, 61, 0.3);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
+            transform: translateY(-2px);
+        }
+
+        .section8-image {
+            width: 130px;
+            height: 150px;
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: transform 0.28s ease;
+        }
+
+        .section8-card:hover .section8-image {
+            transform: scale(1.06);
+        }
+
+        .section8-name {
+            color: #4f5964;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        .section8-model {
+            color: var(--accent-gold-brown);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+
+        .section8-desc {
+            color: #6d7782;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            margin-bottom: 0;
+        }
+
+        #section9 {
+            padding-top: clamp(1.5rem, 4vw, 2.75rem);
+            padding-bottom: clamp(3rem, 7vw, 5rem);
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(139, 106, 61, 0.06));
+        }
+
+        .section9-card {
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.86);
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+        }
+
+        .section9-card:hover {
+            border-color: rgba(139, 106, 61, 0.32);
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .section9-head {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section9-avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            flex-shrink: 0;
+        }
+
+        .section9-id {
+            color: #4f5964;
+            font-weight: 600;
+            line-height: 1.25;
+        }
+
+        .section9-meta {
+            color: #8b6a3d;
+            font-size: 0.84rem;
+            font-weight: 500;
+            margin-top: 0.1rem;
+        }
+
+        .section9-review {
+            color: #6d7782;
+            font-size: 0.93rem;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+
+        #section10 {
+            padding-top: clamp(3rem, 7vw, 5rem);
+            padding-bottom: clamp(3rem, 7vw, 5rem);
+        }
+
+        #section10 .map-frame {
+            width: 100%;
+            min-height: 460px;
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+        }
+
+        #section10 .contact-card {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.86);
+            padding: 1.1rem 1.1rem 1.2rem;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+        }
+
+        #section10 .contact-title {
+            color: #4f5964;
+            font-weight: 600;
+            margin-bottom: 0.9rem;
+        }
+
+        #section10 .contact-subtitle {
+            color: #6d7782;
+            font-size: 0.92rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        #section10 .form-label {
+            color: #4f5964;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.35rem;
+        }
+
+        #section10 .form-control,
+        #section10 .form-select {
+            border: 1px solid #d6dde6;
+            border-radius: 10px;
+            color: #4f5964;
+            background-color: #fff;
+            min-height: 42px;
+        }
+
+        #section10 .form-control:focus,
+        #section10 .form-select:focus {
+            border-color: rgba(139, 106, 61, 0.52);
+            box-shadow: 0 0 0 0.18rem rgba(139, 106, 61, 0.16);
+        }
+
+        #section10 textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        #section10 .form-check-label {
+            color: #6d7782;
+            font-size: 0.88rem;
+        }
+
+        #section10 .contact-submit-btn {
+            border: 1px solid #d6dde6;
+            border-radius: 10px;
+            background: #f7f9fc;
+            color: #66717d;
+            font-weight: 500;
+            min-height: 42px;
+            transition: color var(--underline-duration) ease-in-out,
+                border-color var(--underline-duration) ease-in-out,
+                background-color var(--underline-duration) ease-in-out;
+        }
+
+        #section10 .contact-submit-btn:hover,
+        #section10 .contact-submit-btn:focus-visible {
+            color: var(--accent-gold-brown);
+            border-color: var(--accent-gold-brown);
+            background: #fbf8f2;
+        }
+
+        @media (max-width: 575.98px) {
+            .section8-card {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .section8-image {
+                width: 110px;
+                height: 128px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .main-nav {
+                max-width: 1320px;
+            }
+
+            .menu-list {
+                gap: 40px;
+            }
+
+            .menu-list a {
+                font-size: 1.05rem;
+                padding: 8px 4px;
+            }
+        }
+
+        @media (max-width: 991.98px) and (min-width: 768px) {
+            .main-nav {
+                gap: 14px;
+            }
+
+            .menu-list {
+                gap: 18px;
+            }
+
+            .menu-list a {
+                font-size: 0.92rem;
+            }
+
+            .social-icons {
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .main-nav {
+                position: relative;
+            }
+
+            .menu-list.collapse {
+                position: absolute;
+                top: calc(100% + 10px);
+                left: 20px;
+                right: 20px;
+                background: #fff;
+                border: 1px solid #d9e1ea;
+                border-radius: 12px;
+                box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+                flex-direction: column;
+                gap: 0;
+                overflow: hidden;
+                z-index: 20;
+            }
+
+            .menu-list.collapse.show {
+                display: flex;
+            }
+
+            .menu-list li {
+                width: 100%;
+            }
+
+            .menu-list a {
+                display: block;
+                width: 100%;
+                padding: 12px 16px;
+            }
+
+            .menu-list a:hover {
+                background-color: #f6f8fb;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+            }
+        }
+
+        /* copied from show_pro.html: font + hover style (placed later to override conflicts) */
+        :root {
+            --accent-gold-brown: #8b6a3d;
+            --underline-duration: 360ms;
+        }
+
+        body {
+            font-family: "Zen Kaku Gothic New", "Noto Sans TC", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.01em;
+        }
+
+        .menu-list a {
+            font-weight: 400;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.18em;
+            transition: color var(--underline-duration) ease-in-out;
+        }
+
+        .menu-list a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background: currentColor;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform var(--underline-duration) ease-in-out;
+        }
+
+        .menu-list a:hover,
+        .menu-list a:focus-visible {
+            color: var(--accent-gold-brown);
+        }
+
+        .menu-list a:hover::after,
+        .menu-list a:focus-visible::after {
+            transform: scaleX(1);
+        }
+
+        .social-icons .social-link:hover,
+        .social-icons .social-link:focus-visible {
+            color: var(--accent-gold-brown);
+        }
+
+        @media (max-width: 767.98px) {
+            .menu-list a {
+                display: block;
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .menu-list.collapse {
+                display: flex !important;
+                height: auto !important;
+                visibility: visible;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!---------- Section 1: 首頁連結區塊 ---------------------->
+    <!-- nav bar 左側logo 中央menu 右側social media icons 包含FB ig YT X -->
+
+    <section id="section1">
+        <nav class="main-nav">
+            <div>
+                <img src="images/Logo.png" alt="Logo" height="40">
+            </div>
+
+            <ul class="menu-list collapse" id="mainMenuList">
+                <li><a href="#">產品介紹</a></li>
+                <li><a href="#">最新消息</a></li>
+                <li><a href="#">聯絡我們</a></li>
+                <li><a href="#">支援維修</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button class="menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenuList"
+                    aria-controls="mainMenuList" aria-expanded="false" aria-label="開啟選單">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="social-icons">
+                    <a href="#" class="social-link" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-link" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-link" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#" class="social-link" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                    <div class="member-menu">
+                        <a href="#" class="social-link" aria-label="會員中心"><i class="fa-regular fa-user"></i></a>
+                        <div class="member-dropdown">
+                            <button type="button" class="member-btn" data-bs-toggle="modal"
+                                data-bs-target="#registerModal">註冊會員</button>
+                            <button type="button" class="member-btn" data-bs-toggle="modal"
+                                data-bs-target="#loginModal">登入會員</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+
+    <!---------- Section 2: 輪播 寬 max 1140、比例 1720:715、圖片 contain 不裁切 ---------------------->
+    <section id="section2">
+        <div id="carouselExampleIndicators" class="carousel slide wow animate__animated animate__fadeIn"
+            data-wow-duration="2s" data-wow-delay="0s" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active carousel-item-bg"
+                    style="background-image: url('images/ADX7000_caro.png');">
+                </div>
+                <div class="carousel-item carousel-item-bg" style="background-image: url('images/M50x_ENSO_caro.png');">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <!---------- Section 3:  ---------------------->
+    <section id="section1">
+
+    </section>
+
+    <!---- Section 4: 量化數字展示區 帶入品牌歷史 商品數量 市佔率等 ---------->
+    <section id="section4">
+        <!-- 左邊區域帶入圖片 右邊區域上部分帶入介紹 下部分切成四小塊數字展示 -->
+        <div class="container py-4 section4-wrap">
+            <div class="row align-items-center g-4 section4-row">
+                <div class="col-12 col-md-6 d-none d-md-block section4-image-col">
+                    <div class="section4-image wow animate__animated animate__fadeIn" data-wow-duration="2s"
+                        data-wow-delay="0s"></div>
+                </div>
+
+                <div class="col-12 col-md-6 section4-content-col">
+                    <div class="ps-md-3 section4-content">
+                        <h5 class="mb-3">來自日本：放眼全球的音樂之聲，追尋對音樂的真實感動</h5>
+                        <p class="mb-2 text-secondary lh-lg">
+                            自 1962 年創立以來，Audio-Technica 始終以「真實還原聲音」為核心，
+                            透過日本工藝與聲學技術，持續打造兼具專業表現與日常聆聽體驗的產品。
+                        </p>
+                        <p class="mb-4 text-secondary lh-lg">
+                            從錄音室、舞台到個人生活場景，我們相信每一次聆聽都值得被細緻對待，
+                            讓聲音不只被聽見，更能被感受。
+                        </p>
+                        <!-- counter up 2 動態數字展示 -->
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="h6 mb-1">品牌歷史</div>
+                                <div class="h4 mb-0"><span class="text-primary h1 counter">55</span>年</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="h6 mb-1">商品數量</div>
+                                <div class="h4 mb-0"><span class="text-primary h1 counter">1000</span><span
+                                        class="text-primary h1">+</span>種</div>
+                            </div>
+                            <div class="col-6">
+                                <div class="h6 mb-1">全球市占率</div>
+                                <div class="h4 mb-0"><span class="text-primary h1 counter">32</span><span
+                                        class="text-primary h1">%</span></div>
+                            </div>
+                            <div class="col-6">
+                                <div class="h6 mb-1">全球據點</div>
+                                <div class="h4 mb-0"><span class="text-primary h1 counter">30</span><span
+                                        class="text-primary h1">+</span>國</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 6: 企業精神 ---------->
+    <section id="section6">
+        <div class="container">
+            <div class="row g-4 justify-content-center text-center">
+                <div class="col-12 col-md-4">
+                    <div class="section6-card wow animate__animated animate__flipInX" data-wow-duration="2s" data-wow-delay="0s" tabindex="0">
+                        <div class="section6-card-front">
+                            <i class="fa-solid fa-headphones section6-icon" aria-hidden="true"></i>
+                            <h5 class="mb-0">真實還原，聽見細節</h5>
+                        </div>
+                        <div class="section6-roller">
+                            <p class="small mb-0">
+                                以聲學工程為核心，讓每一段旋律、每一個呼吸與空間感都能被忠實呈現，
+                                把錄音室與舞台上的專業標準，帶進你的日常聆聽。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="section6-card wow animate__animated animate__flipInX" data-wow-duration="2s" data-wow-delay="0.1s" tabindex="0">
+                        <div class="section6-card-front">
+                            <i class="fa-solid fa-sliders section6-icon" aria-hidden="true"></i>
+                            <h5 class="mb-0">日本工藝，穩定可靠</h5>
+                        </div>
+                        <div class="section6-roller">
+                            <p class="small mb-0">
+                                從材料、結構到品質把關，我們在意每一次配戴與長時間使用的舒適與耐用，
+                                讓你能專注於聲音本身，而不是器材的干擾。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="section6-card wow animate__animated animate__flipInX" data-wow-duration="2s" data-wow-delay="0.2s" tabindex="0">
+                        <div class="section6-card-front">
+                            <i class="fa-solid fa-music section6-icon" aria-hidden="true"></i>
+                            <h5 class="mb-0">貼近生活，陪伴創作</h5>
+                        </div>
+                        <div class="section6-roller">
+                            <p class="small mb-0">
+                                無論是創作、通勤或放鬆片刻，Audio-Technica 都希望成為你與音樂之間最自然的連結，
+                                讓好聲音成為生活裡隨手可得的美好體驗。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 7: 商品介紹 對角線排版 ---------->
+    <section id="section7" class="position-relative">
+        <!-- position-absolute 讓圖片覆蓋在這個區塊之上 -->
+        <div class="row">
+            <div class="col-md-5 position-absolute top-0 bottom-0 section7-visual 
+            wow animate__animated animate__slideInLeft"
+            data-wow-duration="2s" data-wow-delay="0s" 
+                style="background-image: url('images/section_pic_02.png'); left: 12px;">
+            </div>
+
+
+            <div class="container">
+                <!-- 推到最後面 讓圖片視覺上靠左 內文靠右-->
+                <div class="row justify-content-end">
+                    <div class="col-md-7">
+                        <h3 class="mb-3 wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="0s"
+                            style="color: #4f5964;">精選聆聽，從日常到專業</h3>
+                        <div class="section7-gold-line wow animate__animated animate__slideInLeft"
+                            data-wow-duration="2s" data-wow-delay="0s"></div>
+                        <p class="text-secondary lh-lg mb-3">
+                            在台灣鐵三角，我們相信「好聲音」不應只存在於錄音室或舞台，而是能陪伴你通勤、創作、專注與放鬆的每一刻。
+                            從耳罩式監聽、便攜耳機到無線與降噪需求，我們以一致的品牌精神，把聲學技術轉化成可感知的聆聽體驗。
+                        </p>
+                        <p class="text-secondary lh-lg mb-4">
+                            你可以依使用情境挑選適合的系列：需要精準細節與耐聽度的工作監聽、追求舒適配戴與穩定連線的日常聆聽，
+                            或是希望把音樂情緒完整帶出門的便攜選擇。每一款產品，都是為了讓你更靠近聲音的真實樣貌。
+                        </p>
+                        <a href="#" class="text-decoration-none"
+                            style="color: var(--accent-gold-brown);">探索產品系列</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 同一段落結構複製：圖靠右、內文靠左（黑膠唱盤／唱針） -->
+        <div class="row section7-row--mirror">
+            <div class="col-md-5 position-absolute top-0 end-0 bottom-0 section7-visual
+            wow animate__animated animate__slideInRight"
+                data-wow-duration="2s" data-wow-delay="0s"
+                style="background-image: url('images/section_pic_01.png');">
+            </div>
+
+            <div class="container">
+                <!-- 內文靠左 -->
+                <div class="row justify-content-start">
+                    <div class="col-md-7">
+                        <h3 class="mb-3 wow animate__animated animate__fadeIn" data-wow-duration="3s" data-wow-delay="0s"
+                            style="color: #4f5964;">黑膠唱盤與唱針，類比的美好細節</h3>
+                        <div class="section7-gold-line wow animate__animated animate__slideInRight"
+                            data-wow-duration="2s" data-wow-delay="0s"></div>
+                        <p class="text-secondary lh-lg mb-3">
+                            從入門到進階，鐵三角黑膠唱盤與唱針系列把「轉動的溫度」留在你的客廳與工作桌旁。
+                            穩定的轉速、清楚的定位與耐聽的音色走向，讓你更容易聽見唱片溝槽裡的呼吸與空氣感。
+                        </p>
+                        <p class="text-secondary lh-lg mb-4">
+                            唱針作為類比系統的第一線，我們提供多種型式與音色取向的選擇，並建議依使用頻率定期檢視與更換，
+                            讓每一次落針都能維持最佳循跡與聲音表現，延長唱片與器材的使用體驗。
+                        </p>
+                        <a href="#" class="text-decoration-none"
+                            style="color: var(--accent-gold-brown);">認識唱盤與唱針系列</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 8: 配件介紹 ---------->
+    <section id="section8">
+        <div class="container">
+            <h3 class="section8-title mb-4">其他配件</h3>
+            <div class="row g-3 g-md-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="section8-card">
+                        <img src="images/other_product_01.png" alt="耳機桌上架"
+                            class="section8-image wow animate__animated animate__fadeIn" data-wow-duration="2s"
+                            data-wow-delay="0s">
+                        <div>
+                            <div class="section8-name">耳機桌上架</div>
+                            <p class="section8-model">AT-HPS700</p>
+                            <p class="section8-desc">金屬質感與穩固結構，完美展示並妥善收納心愛耳機，讓桌面更俐落有序。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="section8-card">
+                        <img src="images/other_product_02.png" alt="耳機攜存盒"
+                            class="section8-image wow animate__animated animate__fadeIn" data-wow-duration="2s"
+                            data-wow-delay="0.1s">
+                        <div>
+                            <div class="section8-name">耳機攜存盒</div>
+                            <p class="section8-model">AT-HPC3</p>
+                            <p class="section8-desc">講究的耳機，講究的收納。兼具美感與實用性的高級耳機硬殼攜存盒。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="section8-card">
+                        <img src="images/other_product_03.png" alt="耳機掛架"
+                            class="section8-image wow animate__animated animate__fadeIn" data-wow-duration="2s"
+                            data-wow-delay="0.2s">
+                        <div>
+                            <div class="section8-name">耳機掛架</div>
+                            <p class="section8-model">AT-HPH300</p>
+                            <p class="section8-desc">讓無處可放的耳機能夠靈活擺設，可固定於書桌或櫃子上收納的專用掛架。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 9: 愛好者分享區 練習串接randomuser API---------->
+    <section id="section9">
+        <div class="container">
+            <h3 class="section8-title mb-4">品牌愛好者</h3>
+            <div class="row g-3 g-md-4" id="section9-card">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <article class="section9-card wow animate__animated animate__fadeIn" data-wow-duration="2s"
+                        data-wow-delay="0s">
+                        <div class="section9-head">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="愛好者頭像" class="section9-avatar">
+                            <div>
+                                <div class="section9-id">@audio_lover_tw</div>
+                                <div class="section9-meta">ATH-M50xBT2 使用者</div>
+                            </div>
+                        </div>
+                        <div>
+                            <p class="section9-review">
+                                低頻穩定、解析清楚，長時間配戴也不會壓耳。無論通勤或在家工作，都能保持很一致的聆聽品質。
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 10: 地圖顯示＋聯絡我們表單 ---------->
+    <section id="section10">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-12 col-md-6">
+                    <div class="map-frame">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6858581180654!2d120.6834411!3d24.147668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d694b9e45e1%3A0x966c73ab804449d3!2z5Y-w54Gj6ZC15LiJ6KeS5Y-w5Lit5bGV56S65Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1776138346372!5m2!1szh-TW!2stw" width="100%" height="645px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <!-- 聯絡我們表單 -->
+                <div class="col-12 col-md-6">
+                    <form action="" id="contact-form" class="contact-card">
+                        <h4 class="contact-title">聯絡我們</h4>
+                        <p class="contact-subtitle">
+                            若有產品選購、維修服務或合作提案，歡迎留下聯絡資訊與需求內容，我們將盡快與你聯繫。
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-12 col-md-6">
+                                <label for="contact-name" class="form-label">姓名</label>
+                                <input type="text" id="contact-name" name="name" class="form-control" placeholder="請輸入姓名" required>
+                            </div>
+
+                            <div class="col-12 col-md-6">
+                                <label for="contact-phone" class="form-label">聯絡電話</label>
+                                <input type="tel" id="contact-phone" name="phone" class="form-control" placeholder="請輸入聯絡電話">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="contact-email" class="form-label">Email</label>
+                                <input type="email" id="contact-email" name="email" class="form-control" placeholder="請輸入 Email" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="contact-topic" class="form-label">主旨</label>
+                                <select id="contact-topic" name="topic" class="form-select" required>
+                                    <option value="">請選擇主旨</option>
+                                    <option value="product">產品諮詢</option>
+                                    <option value="service">維修服務</option>
+                                    <option value="cooperation">合作提案</option>
+                                    <option value="other">其他問題</option>
+                                </select>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="contact-message" class="form-label">訊息內容</label>
+                                <textarea id="contact-message" name="message" class="form-control" placeholder="請描述你的需求或問題" required></textarea>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="contact-agree" name="agree" required>
+                                    <label class="form-check-label" for="contact-agree">
+                                        我已閱讀並同意隱私權政策，且同意網站使用以上資訊與我聯繫。
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 d-grid">
+                                <button type="submit" class="btn contact-submit-btn">送出訊息</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---- Section 11: 頁尾navbar＋友站連結 ---------->
+    <footer>
+        <div class="container">
+            <div class="row align-items-center py-3 border-top border-light-subtle">
+                <div class="col-12 col-md-6 small text-secondary text-center text-md-start mb-2 mb-md-0">
+                    Powered by Audio-Technica Taiwan
+                </div>
+                <div class="col-12 col-md-6 small text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">隱私權政策</a>
+                    <a href="#" class="text-decoration-none text-secondary">服務條款</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!------  註冊會員 Modal ---------------------->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title me-auto" id="registerModalTitle">會員註冊 | Member Registration</h5>
+                    <div class="d-flex align-items-center gap-2 ms-auto flex-shrink-0">
+                        <button type="button" class="btn btn-sm register-submit-btn register-submit-btn--no-hover"
+                            data-bs-toggle="modal" data-bs-target="#loginModal">已經是會員</button>
+                        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-12 col-md-4">
+                            <div class="h-100 p-3 rounded-3 border bg-light-subtle">
+                                <h6 class="mb-3">註冊須知</h6>
+                                <ul class="ps-3 mb-3 small">
+                                    <li class="mb-2">請使用有效 Email，系統將寄送驗證與通知信件。</li>
+                                    <li class="mb-2">帳號限 1-10 字元，建議使用英數組合。</li>
+                                    <li class="mb-2">密碼限 1-10 字元，請勿與其他網站重複使用。</li>
+                                </ul>
+                                <div class="small text-secondary">
+                                    註冊即表示你同意本網站的服務條款與隱私權政策。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-8">
+                            <form class="row g-3">
+                                <div class="col-12">
+                                    <label for="registerUsername" class="form-label">帳號</label>
+                                    <input type="text" id="registerUsername" name="username" class="form-control"
+                                        placeholder="請輸入 1-10 字元帳號" maxlength="10" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="registerPassword" class="form-label">密碼</label>
+                                    <input type="password" id="registerPassword" name="password" class="form-control"
+                                        placeholder="請輸入 1-10 字元密碼" maxlength="10" required>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="registerEmail" class="form-label">Email</label>
+                                    <input type="email" id="registerEmail" name="email" class="form-control"
+                                        placeholder="請輸入 Email" required>
+                                </div>
+
+                                <!-- 同意使用條款 -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="registerAgree" name="agree"
+                                            required>
+                                        <label class="form-check-label" for="registerAgree">我同意本網站的服務條款與隱私權政策</label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 d-grid mt-2">
+                                    <button type="submit" class="btn register-submit-btn">註冊會員</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------  登入會員 Modal ---------------------->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title me-auto" id="loginModalTitle">會員登入 | Member Login</h5>
+                    <div class="d-flex align-items-center gap-2 ms-auto flex-shrink-0">
+                        <button type="button" class="btn btn-sm register-submit-btn register-submit-btn--no-hover"
+                            data-bs-toggle="modal" data-bs-target="#registerModal">新建帳號</button>
+                        <button type="button" class="btn-close m-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-4 align-items-stretch">
+                        <div class="col-12 col-md-4">
+                            <div class="h-100 p-3 rounded-3 border bg-light-subtle">
+                                <h6 class="mb-3">登入說明</h6>
+                                <ul class="ps-3 mb-3 small">
+                                    <li class="mb-2">請使用註冊時設定的帳號與密碼登入。</li>
+                                    <li class="mb-2">帳號、密碼皆為 1-10 字元，請留意大小寫。</li>
+                                    <li class="mb-2">若忘記密碼，可透過「忘記密碼」流程重設。</li>
+                                </ul>
+                                <div class="small text-secondary">
+                                    登入即表示你了解並同意本網站之服務條款與隱私權政策。
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-8">
+                            <form class="row g-3">
+                                <div class="col-12">
+                                    <label for="loginUsername" class="form-label">帳號</label>
+                                    <input type="text" id="loginUsername" name="username" class="form-control"
+                                        placeholder="請輸入 1-10 字元帳號" maxlength="10" required autocomplete="username">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="loginPassword" class="form-label">密碼</label>
+                                    <input type="password" id="loginPassword" name="password" class="form-control"
+                                        placeholder="請輸入 1-10 字元密碼" maxlength="10" required
+                                        autocomplete="current-password">
+                                </div>
+
+                                <div class="col-12 d-flex flex-wrap align-items-center justify-content-between gap-2">
+                                    <div class="form-check mb-0">
+                                        <input type="checkbox" class="form-check-input" id="loginRemember"
+                                            name="remember">
+                                        <label class="form-check-label" for="loginRemember">記住我</label>
+                                    </div>
+                                    <a href="#" class="small text-secondary text-decoration-none">忘記密碼？</a>
+                                </div>
+
+                                <div class="col-12 d-grid mt-2">
+                                    <button type="submit" class="btn register-submit-btn">登入會員</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (for collapse + modal) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
+
+    <script src="js/jquery-4.0.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+    <script>
+        window.wowInstance = new WOW().init();
+    </script>
+
+    <script>
+        $(function () {
+
+            // ------------ counter up 2 動態數字展示 ------------
+            const counterUp = window.counterUp.default
+            const callback = entries => {
+                entries.forEach(entry => {
+                    const el = entry.target
+                    if (entry.isIntersecting && !el.classList.contains('is-visible')) {
+                        counterUp(el, {
+                            duration: 1000,
+                            delay: 16,
+                        })
+                        el.classList.add('is-visible')
+                    }
+                })
+            }
+            const IO = new IntersectionObserver(callback, {
+                threshold: 0.5,
+                rootMargin: "0px 0px -10% 0px",
+            })
+            document.querySelectorAll('.counter').forEach(function (el) {
+                IO.observe(el)
+            })
+            // ------------ counter up 2 動態數字展示 ------------
+        })
+
+        // ------------ 愛好者分享區 練習串接randomuser API---------->
+        $(function () {
+            const fanReviews = [
+                "聲音層次很清楚，人聲位置自然，通勤聽一整路也不會覺得疲勞。",
+                "拿來做剪輯參考很穩，細節與低頻控制都比我預期更好。",
+                "外觀低調、配戴舒適，平常在咖啡廳工作時隔音效果很實用。",
+                "從手機到電腦都好推，聲音乾淨耐聽，日常使用率非常高。",
+                "高頻不刺耳、低頻有彈性，聽流行和爵士都能保有細節。",
+                "做工很細緻，長時間聆聽依然舒服，是我近期最滿意的升級。"
+            ]
+
+            const fanProducts = [
+                "ATH-M50xBT2 使用者",
+                "ATH-R70x 使用者",
+                "AT-LP120X 使用者",
+                "ATH-CKR75BT 使用者",
+                "ATH-AVA500 使用者",
+                "AT-VM95E 使用者"
+            ]
+            let fanData = []
+
+            // 取 randomuser 資料
+            $.ajax({
+                url: 'https://randomuser.me/api/?results=3',
+                method: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    fanData = data.results
+                    renderFanCards(fanData)
+                },
+                error: function () {
+                    console.log('接收愛好者資料失敗')
+                }
+            })
+
+            // 渲染愛好者卡片
+            function renderFanCards(data) {
+                if (!data || data.length === 0) return
+
+                $('#section9-card').empty()
+
+                data.forEach(function (user, idx) {
+                    const username = user.login.username
+                    const avatar = user.picture.large
+                    const fullName = `${user.name.first} ${user.name.last}`
+                    const review = fanReviews[idx % fanReviews.length]
+                    const product = fanProducts[idx % fanProducts.length]
+
+                    const cardHtml = `
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <article class="section9-card wow animate__animated animate__fadeIn" data-wow-duration="2s" data-wow-delay="${idx * 0.1}s">
+                                <div class="section9-head">
+                                    <img src="${avatar}" alt="${fullName}" class="section9-avatar">
+                                    <div>
+                                        <div class="section9-id">@${username}</div>
+                                        <div class="section9-meta">${product}</div>
+                                    </div>
+                                </div>
+                                <p class="section9-review">${review}</p>
+                            </article>
+                        </div>
+                    `
+                    $('#section9-card').append(cardHtml)
+                })
+                if (window.wowInstance) {
+                    window.wowInstance.sync();
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
