@@ -1,0 +1,32 @@
+[
+  {
+    "modelname": "AT-LP8X",
+    "itemname": "半自動直驅式黑膠唱盤",
+    "img_path": "images/HOT-LP8X.png"
+  },
+  {
+    "modelname": "AT-SB727",
+    "itemname": "Sound Burger無線可攜式黑膠唱盤機",
+    "img_path": "images/HOT-SB727.png"
+  },
+  {
+    "modelname": "AT-CSP7",
+    "itemname": "通話揚聲器",
+    "img_path": "images/HOT-CSP7.png"
+  },
+  {
+    "modelname": "AT-SP3X",
+    "itemname": "主動式書架型喇叭",
+    "img_path": "images/HOT-SP3X.png"
+  },
+  {
+    "modelname": "White Party",
+    "itemname": "直播套組",
+    "img_path": "images/HOT-white party.png"
+  },
+  {
+    "modelname": "AT-UMX3",
+    "itemname": "USB音訊混音器",
+    "img_path": "images/HOT-UMX3.png"
+  }
+]

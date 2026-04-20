@@ -248,7 +248,7 @@
             z-index: 0;
             background-repeat: no-repeat;
             background-size: cover;
-            background-position: left-12px center;
+            background-position: center center;
             width: 100%;
         }
 
@@ -830,6 +830,7 @@
         :root {
             --accent-gold-brown: #8b6a3d;
             --underline-duration: 360ms;
+            --section3-hot-pic-bg: #e4e4e6;
         }
 
         body {
@@ -887,6 +888,347 @@
                 height: auto !important;
                 visibility: visible;
             }
+        }
+
+        /* ========== Section 3：熱門商品（樣式僅作用於 #section3） ========== */
+        #section3 {
+            padding: 24px 0;
+        }
+
+        #section3 .section3-container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        #section3 .section3-row {
+            min-height: 500px;
+        }
+
+        #section3 .section3-panel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+        }
+
+        #section3 .section3-left-wrap {
+            height: 500px;
+        }
+
+        #section3 .section3-top-row {
+            height: calc(400px - 6px);
+        }
+
+        #section3 .section3-bottom-row {
+            height: calc(100px - 6px);
+            margin-top: 12px;
+        }
+
+        #section3 .section3-right-wrap {
+            height: 500px;
+        }
+
+        #section3 .section3-right-top-row {
+            height: calc(100px - 6px);
+        }
+
+        #section3 .section3-right-bottom-row {
+            height: calc(400px - 6px);
+            margin-top: 12px;
+        }
+
+        #section3 .section3-title-panel {
+            flex-direction: column;
+            text-align: center;
+            gap: 6px;
+            padding: 12px 16px;
+        }
+
+        #section3 .section3-title-zh {
+            font-size: 1.65rem;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        #section3 .section3-title-en {
+            font-size: 0.95rem;
+            font-weight: 400;
+            letter-spacing: 0.22em;
+            color: #000;
+            line-height: 1.2;
+        }
+
+        #section3 .section3-content-panel {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            gap: 12px;
+            padding: 16px clamp(1rem, 5%, 1.75rem);
+            box-sizing: border-box;
+        }
+
+        #section3 .section3-model {
+            font-size: 1.45rem;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.25;
+        }
+
+        #section3 .section3-item {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        #section3 .btn {
+            font-weight: 400;
+        }
+
+        #section3 .section3-detail-btn {
+            font-size: 0.85rem;
+            font-weight: 400;
+            padding: 0.4rem 1.15rem;
+            border-radius: 999px;
+            border: none;
+            color: #fff;
+            background: var(--accent-gold-brown);
+        }
+
+        #section3 .section3-detail-btn:hover {
+            background: #7a5c34;
+            color: #fff;
+        }
+
+        #section3 .section3-panel.section3-hot-pic-panel {
+            background-color: var(--section3-hot-pic-bg);
+        }
+
+        @media (min-width: 768px) {
+            #section3 .section3-left-wrap .section3-content-panel {
+                text-align: right;
+                align-items: flex-end;
+            }
+
+            #section3 .section3-left-wrap .section3-hot-pic-panel {
+                justify-content: flex-end;
+            }
+
+            #section3 .section3-right-wrap .section3-title-panel {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            #section3 .section3-right-wrap .section3-content-panel {
+                text-align: left;
+                align-items: flex-start;
+            }
+
+            #section3 .section3-right-wrap .section3-hot-pic-panel {
+                justify-content: flex-start;
+            }
+        }
+
+        #section3 .section3_hot_pic {
+            width: 88%;
+            height: 78%;
+            object-fit: contain;
+        }
+
+        #section3 .section3-hot-pic-panel .section3_hot_pic {
+            height: 88%;
+        }
+
+        /* XL 以上：欄寬為 5+7 與 7+5，圖片再略放大以填滿較寬圖片格（僅桌機 web，不含手機區） */
+        @media (min-width: 1200px) {
+            #section3 .d-none.d-md-block .section3_hot_pic {
+                width: 94%;
+                height: 86%;
+            }
+
+            #section3 .d-none.d-md-block .section3-hot-pic-panel .section3_hot_pic {
+                height: 90%;
+            }
+        }
+
+        #section3 .section3-pager-panel {
+            justify-content: flex-end;
+            padding: 0 12px;
+        }
+
+        #section3 .section3-pager {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #section3 .section3-pager-btn {
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 6px;
+            background: var(--section3-hot-pic-bg);
+            color: #000;
+            font-size: 1.5rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        #section3 .section3-pager-btn:hover {
+            background: #d4d4d6;
+            color: #000;
+        }
+
+        #section3 .section3-pager-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #section3 .section3-container {
+            overflow: hidden;
+        }
+
+        #section3 .section3-row,
+        #section3 .section3-mobile {
+            will-change: transform, opacity;
+        }
+
+        #section3.section3-leaving-next .section3-row,
+        #section3.section3-leaving-next .section3-mobile {
+            transform: translateX(-120px);
+            opacity: 0;
+            transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1), opacity 220ms ease;
+        }
+
+        #section3.section3-leaving-prev .section3-row,
+        #section3.section3-leaving-prev .section3-mobile {
+            transform: translateX(120px);
+            opacity: 0;
+            transition: transform 220ms cubic-bezier(0.4, 0, 0.2, 1), opacity 220ms ease;
+        }
+
+        #section3.section3-entering-next .section3-row,
+        #section3.section3-entering-next .section3-mobile {
+            animation: section3SlideInNext 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        #section3.section3-entering-prev .section3-row,
+        #section3.section3-entering-prev .section3-mobile {
+            animation: section3SlideInPrev 320ms cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        @keyframes section3SlideInNext {
+            from {
+                opacity: 0;
+                transform: translateX(120px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes section3SlideInPrev {
+            from {
+                opacity: 0;
+                transform: translateX(-120px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #section3 .section3-mobile .mobile-row-1 {
+            height: 100px;
+            margin-bottom: 12px;
+        }
+
+        #section3 .section3-mobile .mobile-row-2 {
+            height: 300px;
+            margin-bottom: 12px;
+        }
+
+        #section3 .section3-mobile .mobile-row-3 {
+            height: 150px;
+            margin-bottom: 12px;
+        }
+
+        #section3 .section3-mobile .mobile-row-4 {
+            height: 50px;
+        }
+
+        #section3 .section3-mobile .section3-hot-pic-panel {
+            display: block;
+            overflow: hidden;
+            min-height: 0;
+            background-color: var(--section3-hot-pic-bg);
+        }
+
+        #section3 .section3-mobile .section3-hot-pic-panel .section3_hot_pic {
+            display: block;
+            width: 100%;
+            height: 100%;
+            max-width: none;
+            max-height: none;
+            object-fit: cover;
+            object-position: center center;
+        }
+
+        #section3 .section3-mobile .section3-pager-panel {
+            justify-content: center;
+            padding: 0 8px;
+        }
+
+        #section3 .section3-mobile .section3-pager-btn {
+            width: 34px;
+            height: 34px;
+            font-size: 1.25rem;
+        }
+
+        #section3 .section3-mobile .section3-content-panel {
+            gap: 8px;
+            padding: 10px clamp(0.75rem, 4vw, 1.25rem);
+            text-align: center;
+            align-items: center;
+            box-sizing: border-box;
+        }
+
+        #section3 .section3-mobile .section3-title-panel {
+            text-align: center;
+            align-items: center;
+        }
+
+        #section3 .section3-mobile .section3-model {
+            font-size: 1.05rem;
+        }
+
+        #section3 .section3-mobile .section3-item {
+            font-size: 0.88rem;
+        }
+
+        #section3 .section3-mobile .section3-title-zh {
+            font-size: 1.35rem;
+        }
+
+        #section3 .section3-mobile .section3-title-en {
+            font-size: 0.8rem;
+            letter-spacing: 0.16em;
+        }
+
+        #section3 .section3-mobile .section3-detail-btn {
+            font-size: 0.7rem;
+            padding: 0.25rem 0.65rem;
         }
     </style>
 </head>
@@ -964,9 +1306,117 @@
 
     </section>
 
-    <!---------- Section 3:  ---------------------->
-    <section id="section1">
+    <!---------- Section 3：熱門商品 ---------------------->
+    <section id="section3">
+        <div class="section3-container">
+            <div class="d-none d-md-block">
+                <div class="row section3-row gx-3">
+                    <div class="col-6">
+                        <div class="section3-left-wrap">
+                            <div class="row section3-top-row gx-3">
+                                <div class="col-6 col-xl-5">
+                                    <div class="section3-panel section3-content-panel h-100">
+                                        <div class="section3-model section3-bind-a-model"></div>
+                                        <div class="section3-item section3-bind-a-item"></div>
+                                        <button type="button" class="btn section3-detail-btn">詳細資訊</button>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-xl-7">
+                                    <div class="section3-panel section3-hot-pic-panel h-100">
+                                        <img class="section3_hot_pic section3-bind-a-img" src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section3-bottom-row">
+                                <div class="col-12">
+                                    <div class="section3-panel section3-pager-panel h-100">
+                                        <div class="section3-pager">
+                                            <button type="button" class="section3-pager-btn section3-pager-prev" aria-label="上一組">‹</button>
+                                            <button type="button" class="section3-pager-btn section3-pager-next" aria-label="下一組">›</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="section3-right-wrap">
+                            <div class="row section3-right-top-row">
+                                <div class="col-12">
+                                    <div class="section3-panel section3-title-panel h-100">
+                                        <div class="section3-title-zh">熱門商品</div>
+                                        <div class="section3-title-en">HOT PRODUCTS</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row section3-right-bottom-row gx-3">
+                                <div class="col-6 col-xl-7">
+                                    <div class="section3-panel section3-hot-pic-panel h-100">
+                                        <img class="section3_hot_pic section3-bind-b-img" src="" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-6 col-xl-5">
+                                    <div class="section3-panel section3-content-panel h-100">
+                                        <div class="section3-model section3-bind-b-model"></div>
+                                        <div class="section3-item section3-bind-b-item"></div>
+                                        <button type="button" class="btn section3-detail-btn">詳細資訊</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="section3-mobile d-md-none px-2">
+                <div class="row mobile-row-1 gx-2">
+                    <div class="col-12">
+                        <div class="section3-panel section3-title-panel h-100">
+                            <div class="section3-title-zh">熱門商品</div>
+                            <div class="section3-title-en">HOT PRODUCTS</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mobile-row-2 gx-2">
+                    <div class="col-6">
+                        <div class="section3-panel section3-hot-pic-panel h-100">
+                            <img class="section3_hot_pic section3-bind-a-img" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="section3-panel section3-hot-pic-panel h-100">
+                            <img class="section3_hot_pic section3-bind-b-img" src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mobile-row-3 gx-2">
+                    <div class="col-6">
+                        <div class="section3-panel section3-content-panel h-100">
+                            <div class="section3-model section3-bind-a-model"></div>
+                            <div class="section3-item section3-bind-a-item"></div>
+                            <button type="button" class="btn section3-detail-btn">詳細資訊</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="section3-panel section3-content-panel h-100">
+                            <div class="section3-model section3-bind-b-model"></div>
+                            <div class="section3-item section3-bind-b-item"></div>
+                            <button type="button" class="btn section3-detail-btn">詳細資訊</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mobile-row-4 gx-2">
+                    <div class="col-12">
+                        <div class="section3-panel section3-pager-panel h-100">
+                            <div class="section3-pager">
+                                <button type="button" class="section3-pager-btn section3-pager-prev" aria-label="上一組">‹</button>
+                                <button type="button" class="section3-pager-btn section3-pager-next" aria-label="下一組">›</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!---- Section 4: 量化數字展示區 帶入品牌歷史 商品數量 市佔率等 ---------->
@@ -1425,6 +1875,251 @@
 
     <!-- Bootstrap JS (for collapse + modal) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 熱門商品：靜態 JSON（與 data/hot-products.json 同步）。串接後台時改 ENDPOINT 與錯誤處理即可。 -->
+    <script>
+        (function (global) {
+            /** 展示站讀靜態檔；上線改為後台 API，例如 '/api/cms/hot-products' */
+            var HOT_PRODUCTS_ENDPOINT = 'data/hot-products.json';
+
+            /**
+             * @returns {Promise<Array<{ modelname: string, itemname: string, img_path: string }>>}
+             */
+            function loadHotProducts() {
+                return fetch(HOT_PRODUCTS_ENDPOINT, {
+                    method: 'GET',
+                    headers: { Accept: 'application/json' },
+                    cache: 'no-store'
+                }).then(function (res) {
+                    if (!res.ok) {
+                        throw new Error('hot-products: HTTP ' + res.status);
+                    }
+                    return res.json();
+                }).then(function (data) {
+                    if (!Array.isArray(data)) {
+                        throw new Error('hot-products: response is not an array');
+                    }
+                    return data;
+                });
+            }
+
+            global.HOT_PRODUCTS_ENDPOINT = HOT_PRODUCTS_ENDPOINT;
+            global.loadHotProducts = loadHotProducts;
+        })(window);
+    </script>
+
+    <script>
+        (function () {
+            var STEP = 2;
+            var LEAVE_DURATION = 220;
+            var ENTER_DURATION = 320;
+            var INITIAL_ENTER_DURATION = 2000;
+
+            function initSection3Hots(HOT_PRODUCTS) {
+                var root = document.getElementById('section3');
+                if (!root || !Array.isArray(HOT_PRODUCTS) || HOT_PRODUCTS.length === 0) {
+                    return;
+                }
+
+                var carouselIndex = 0;
+                var isAnimating = false;
+                var imagePreloadCache = {};
+
+                function productAt(offset) {
+                    var n = HOT_PRODUCTS.length;
+                    return HOT_PRODUCTS[(carouselIndex + offset + n * 10) % n];
+                }
+
+                function renderHotSlots() {
+                    var a = productAt(0);
+                    var b = productAt(1);
+                    root.querySelectorAll('.section3-bind-a-model').forEach(function (el) {
+                        el.textContent = a.modelname;
+                    });
+                    root.querySelectorAll('.section3-bind-a-item').forEach(function (el) {
+                        el.textContent = a.itemname;
+                    });
+                    root.querySelectorAll('.section3-bind-a-img').forEach(function (el) {
+                        el.loading = 'eager';
+                        el.decoding = 'async';
+                        el.src = a.img_path;
+                        el.alt = a.modelname + ' ' + a.itemname;
+                    });
+                    root.querySelectorAll('.section3-bind-b-model').forEach(function (el) {
+                        el.textContent = b.modelname;
+                    });
+                    root.querySelectorAll('.section3-bind-b-item').forEach(function (el) {
+                        el.textContent = b.itemname;
+                    });
+                    root.querySelectorAll('.section3-bind-b-img').forEach(function (el) {
+                        el.loading = 'eager';
+                        el.decoding = 'async';
+                        el.src = b.img_path;
+                        el.alt = b.modelname + ' ' + b.itemname;
+                    });
+                }
+
+                function preloadImage(src) {
+                    if (!src) {
+                        return Promise.resolve();
+                    }
+                    if (imagePreloadCache[src]) {
+                        return imagePreloadCache[src];
+                    }
+
+                    imagePreloadCache[src] = new Promise(function (resolve) {
+                        var img = new Image();
+                        var finished = false;
+                        function done() {
+                            if (finished) {
+                                return;
+                            }
+                            finished = true;
+                            resolve();
+                        }
+                        img.onload = done;
+                        img.onerror = done;
+                        img.src = src;
+
+                        // 部分瀏覽器支援 decode，可降低切換當下的解碼卡頓
+                        if (typeof img.decode === 'function') {
+                            img.decode().then(done).catch(done);
+                        }
+                    });
+
+                    return imagePreloadCache[src];
+                }
+
+                function preloadProductsImages(products) {
+                    var tasks = (products || []).map(function (item) {
+                        return preloadImage(item && item.img_path);
+                    });
+                    return Promise.all(tasks).then(function () {
+                        return undefined;
+                    });
+                }
+
+                function preloadAllImages() {
+                    return preloadProductsImages(HOT_PRODUCTS);
+                }
+
+                function setPagerDisabled(disabled) {
+                    root.querySelectorAll('.section3-pager-btn').forEach(function (btn) {
+                        btn.disabled = disabled;
+                    });
+                }
+
+                function clearSwitchClasses() {
+                    root.classList.remove(
+                        'section3-leaving-next',
+                        'section3-leaving-prev',
+                        'section3-entering-next',
+                        'section3-entering-prev'
+                    );
+                }
+
+                function playInitialEnter() {
+                    isAnimating = true;
+                    setPagerDisabled(true);
+                    clearSwitchClasses();
+
+                    var desktopLeft = root.querySelector('.section3-row > .col-6:first-child');
+                    var desktopRight = root.querySelector('.section3-row > .col-6:last-child');
+                    var mobileBlock = root.querySelector('.section3-mobile');
+                    var animations = [
+                        { el: desktopLeft, cls: 'animate__slideInDown' },
+                        { el: desktopRight, cls: 'animate__slideInUp' },
+                        { el: mobileBlock, cls: 'animate__slideInUp' }
+                    ];
+
+                    animations.forEach(function (item) {
+                        if (!item.el) {
+                            return;
+                        }
+                        item.el.classList.add('animate__animated', item.cls);
+                        item.el.style.animationDuration = '2s';
+                    });
+
+                    window.setTimeout(function () {
+                        animations.forEach(function (item) {
+                            if (!item.el) {
+                                return;
+                            }
+                            item.el.classList.remove('animate__animated', item.cls);
+                            item.el.style.removeProperty('animation-duration');
+                        });
+                        setPagerDisabled(false);
+                        isAnimating = false;
+                    }, INITIAL_ENTER_DURATION);
+                }
+
+                function step(delta) {
+                    if (isAnimating) {
+                        return;
+                    }
+
+                    var n = HOT_PRODUCTS.length;
+                    var isNext = delta > 0;
+                    var leaveClass = isNext ? 'section3-leaving-next' : 'section3-leaving-prev';
+                    var enterClass = isNext ? 'section3-entering-next' : 'section3-entering-prev';
+                    var nextIndex = (carouselIndex + delta + n * 100) % n;
+                    var nextProducts = [
+                        HOT_PRODUCTS[nextIndex],
+                        HOT_PRODUCTS[(nextIndex + 1) % n]
+                    ];
+
+                    isAnimating = true;
+                    setPagerDisabled(true);
+                    preloadProductsImages(nextProducts).then(function () {
+                        clearSwitchClasses();
+                        root.classList.add(leaveClass);
+
+                        window.setTimeout(function () {
+                            carouselIndex = nextIndex;
+                            renderHotSlots();
+
+                            root.classList.remove(leaveClass);
+                            void root.offsetWidth;
+                            root.classList.add(enterClass);
+
+                            window.setTimeout(function () {
+                                root.classList.remove(enterClass);
+                                setPagerDisabled(false);
+                                isAnimating = false;
+                            }, ENTER_DURATION);
+                        }, LEAVE_DURATION);
+                    });
+                }
+
+                root.querySelectorAll('.section3-pager-prev').forEach(function (btn) {
+                    btn.addEventListener('click', function () { step(-STEP); });
+                });
+                root.querySelectorAll('.section3-pager-next').forEach(function (btn) {
+                    btn.addEventListener('click', function () { step(STEP); });
+                });
+
+                renderHotSlots();
+                preloadAllImages();
+                playInitialEnter();
+            }
+
+            function run() {
+                if (typeof window.loadHotProducts !== 'function') {
+                    console.warn('Section3: loadHotProducts 未定義');
+                    return;
+                }
+                window.loadHotProducts().then(initSection3Hots).catch(function (err) {
+                    console.warn('Section3: 熱門商品資料載入失敗', err);
+                });
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', run);
+            } else {
+                run();
+            }
+        })();
+    </script>
 
     <script src="https://unpkg.com/counterup2@2.0.2/dist/index.js">	</script>
 
